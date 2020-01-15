@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <title>Tshiamo Bhuda Online</title>
+
+        <link href="assets/css/entireframework.min.css" rel="stylesheet">
+        <link href="assets/css/styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="nav" onclick="this.focus()" tabindex="-1">
+            <div class="container">
+                <a class="pagename current" href="{{ site.baseurl}}">TSHIAMO BHUDA</a>
+                <a href="{{ site.baseurl}}/#articles">Articles</a>
+                <a href="{{ site.baseurl}}/#projects">Projects</a>
+                <a href="https://linkedin.com/in/tshiamo-bhuda" target="_blank">Contact</a>
+            </div>
+        </nav>
+        <button class="btn-close btn btn-sm">×</button>
+        
+        {{ content }}
+
+    </body>
+</html>
