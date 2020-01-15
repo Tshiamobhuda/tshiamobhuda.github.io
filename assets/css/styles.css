@@ -19,26 +19,38 @@
 
 /* Heading */
 .hero-section {
-    margin: 4rem 0;
+    margin-bottom: 4rem ;
 }
 
 /* Post*/
 .post {
     padding: 10px;
-    background: #eee;
-    border-color: #333;
+    background: #fafafa;
     margin-bottom: 10px;
-    border: 2px solid;
+    border: 2px solid #5a5a5a;
+    box-shadow: 2px 2px 0px;
 }
 
 .post a {
     font-weight: bold;
-    text-decoration: none
+/*    text-decoration: none;*/
+    color: #121212;
+}
+
+/* Projects */
+.projects h4{
+    border-left: 4px solid #5a5a5a;
+    padding: 6px 4px;
+    background: #eee;
+}
+
+.projects li {
+    list-style: square;
 }
 
 /* Misc Helpers */
 .pull-right {
-    float: right
+    float: right;
 }
 
 .exerpt {
@@ -51,12 +63,21 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.padding-sides-sm {
+    padding: 0 10px;
+    box-sizing: border-box
 }
 
 /* Media Queries*/
 @media screen and (max-width: 480px) {
     /* mobile */
     .hero-section {
-        margin: .4rem 0;
+        margin-bottom: .4rem;
     }
+}
+
+hr {
+    border: 1px solid #121212;
 }
