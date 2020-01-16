@@ -39,7 +39,7 @@ layout: default
             {%- for projects in site.data.projects -%}
                 <div class="projects">
                     {%- assign projectName = projects[0] -%}
-                    <h4>{{ projectName }}</h4>
+                    <h4>{{ projectName| replace: '-', ' '|capitalize }}</h4>
                     <ul>
                         {%- for project in site.data.projects[projectName] -%}
                             <li>
