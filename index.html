@@ -36,29 +36,20 @@ layout: default
         </div>
         <div class="col c4 padding-sides-sm" id="projects">
             <h1>Projects</h1>
-            <!--div class="projects"> 
-                <h4>Misc</h4>
-                <ul>
-                    <li>
-
-                        <a href="#">Project name</a>
-                        <p class="excerpt">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis qui consequatur deserunt aut doloremque ab quidem tempore, exercitationem eos recusandae, dolor sed amet vero labore harum, sequi debitis voluptatem.
-                        </p>
-                    </li>
-                </ul>
-            </div-->
-            <div class="projects">
-                <h4>Repos</h4>
-                <ul>
-                    <li>
-                        <a href="https://github.com/tshiamobhuda/brickface">BrickFace</a>
-                        <p class="excerpt">
-                            Fitbit watch face inspired from the old Brick Game.
-                        </p>
-                    </li>
-                </ul>
-            </div>
+            {%- for projects in site.data.projects -%}
+                <div class="projects">
+                    {%- assign projectName = projects[0] -%}
+                    <h4>{{ projectName }}</h4>
+                    <ul>
+                        {%- for project in site.data.projects[projectName] -%}
+                            <li>
+                                <a href="{{ project.url }}" target="_blank">{{ project.title }}</a>
+                                <p class="excerpt">{{ project.content }}</p>
+                            </li>
+                        {%- endfor -%}
+                    </ul>
+                </div>
+            {%- endfor -%}
         </div>
     </div>
 </div>
