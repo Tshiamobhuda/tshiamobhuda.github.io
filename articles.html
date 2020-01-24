@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<div class="container">
+    <div class="row">
+        <div class="col c8 padding-sides-sm" id="articles">
+            {%- include featured_articles.html -%}
+            <div>
+                <h3>All Articles</h3>
+                {%- assign collections = site.collections | where_exp: "collection", "collection.label != 'posts'" -%}
+            {%- for collection in collections -%}
+                    <div class="post">
+                        <a href="{{site.baseurl}}/articles/{{collection.label}}/">{{collection.label | capitalize}}</a>
+                        <span class="pull-right">{{collection.level | capitalize }}</span>
+                        <p class="excerpt">{{collection.excerpt}}</p>
+                    </div>
+                {%- endfor -%}
+            </div>
+        </div>
+        {%- include projects.html -%}
+    </div>
+</div>
