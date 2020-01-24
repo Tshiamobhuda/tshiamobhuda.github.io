@@ -1,3 +1,15 @@
 markdown: kramdown
 baseurl: ''
 exclude: ['README.md']
+permalink: pretty
+
+collections_dir: articles
+
+collections:
+  flappy-bird:
+    sort_by: lesson
+    output: true
+    permalink: 'tutorials/:collection/:title'
+    featured: true
+    excerpt: "In this tutorial series we work our way into rebuilding flappy bird"
+    level: "beginner"
