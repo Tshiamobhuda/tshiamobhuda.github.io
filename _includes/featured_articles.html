@@ -1,0 +1,11 @@
+<h3>Featured Articles</h3>
+{% assign featured_articles = site.collections | where: "featured", true %}
+{%- for article in featured_articles -%}
+    <div class="post">
+        <a href="{{site.baseurl}}/articles/{{article.label}}">{{article.label}}</a>
+        <span class="pull-right">{{article.level | capitalize }}</span>
+        <p class="excerpt">{{article.excerpt}}</p>
+    </div>
+{%- else -%}
+    <p>My pencil ✍ ran out of ink while i was drafting something cool ☹. Please try again later to read my latest post</p>
+{%- endfor -%}

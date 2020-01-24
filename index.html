@@ -10,46 +10,11 @@ layout: default
     <hr>
     <div class="row">
         <div class="col c8 padding-sides-sm" id="articles">
-            <h1>Articles</h1>
-            <p>My pencil ✍ ran out of ink while i was drafting something cool ☹. Please try again later to read my latest post</p>
-            <!--div class="post">
-                <a href="#">The Heading for the post</a>
-                <span class="pull-right">11 Jan 2020</span>
-                <p class="excerpt">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit incidunt ad dolore necessitatibus recusandae ut, id quo explicabo temporibus quas alias neque error, ducimus iusto. Numquam, ullam? Earum, error molestiae.
-                </p>
+            {%- include featured_articles.html -%}
+            <div>
+                <p><a href="{{site.baseurl}}/articles" class="btn btn-classless btn-sm">View all Articles</a></p>
             </div>
-            <div class="post">
-                <a href="#">The Heading for the post</a>
-                <span class="pull-right">11 Jan 2020</span>
-                <p class="excerpt">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit incidunt ad dolore necessitatibus recusandae ut, id quo explicabo temporibus quas alias neque error, ducimus iusto. Numquam, ullam? Earum, error molestiae.
-                </p>
-            </div>
-            <div class="post">
-                <a href="#">The Heading for the post</a>
-                <span class="pull-right">11 Jan 2020</span>
-                <p class="excerpt">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit incidunt ad dolore necessitatibus recusandae ut, id quo explicabo temporibus quas alias neque error, ducimus iusto. Numquam, ullam? Earum, error molestiae.
-                </p>
-            </div-->
         </div>
-        <div class="col c4 padding-sides-sm" id="projects">
-            <h1>Projects</h1>
-            {%- for projects in site.data.projects -%}
-                <div class="projects">
-                    {%- assign projectName = projects[0] -%}
-                    <h4>{{ projectName| replace: '-', ' '|capitalize }}</h4>
-                    <ul>
-                        {%- for project in site.data.projects[projectName] -%}
-                            <li>
-                                <a href="{{ project.url }}" target="_blank">{{ project.title }}</a>
-                                <p class="excerpt">{{ project.content }}</p>
-                            </li>
-                        {%- endfor -%}
-                    </ul>
-                </div>
-            {%- endfor -%}
-        </div>
+        {%- include projects.html -%}
     </div>
 </div>

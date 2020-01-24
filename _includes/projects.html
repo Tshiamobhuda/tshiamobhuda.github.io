@@ -1,0 +1,17 @@
+<div class="col c4 padding-sides-sm" id="projects">
+    <h2>Projects</h2>
+    {%- for projects in site.data.projects -%}
+        <div class="projects">
+            {%- assign projectName = projects[0] -%}
+            <h4>{{ projectName| replace: '-', ' '|capitalize }}</h4>
+            <ul>
+                {%- for project in site.data.projects[projectName] -%}
+                    <li>
+                        <a href="{{ project.url }}" target="_blank">{{ project.title }}</a>
+                        <p class="excerpt">{{ project.content }}</p>
+                    </li>
+                {%- endfor -%}
+            </ul>
+        </div>
+    {%- endfor -%}
+</div>
